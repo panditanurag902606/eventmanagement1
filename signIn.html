@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>signIn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* font-family: 'Times New Roman', Times, serif; */
+}
+      .var{
+        color: black;
+        border-radius: 20px;
+        width: 350px;
+        padding: 30px;
+        margin-top: 20px;
+        align-items: center;
+        border:  2px solid black;
+        background-color: white;
+         transition: all 0.3s ease;
+}
+       .var:hover {
+         box-shadow: 0 12px 30px rgba(249, 5, 5, 0.3);
+       }
+      h1{
+        text-align: center;
+      
+}
+      .btn1{
+        
+        border-radius:150px;
+        text-decoration: none;
+        background-color: azure;
+        color: black;
+        padding: 15px;
+        
+
+}
+      .btn button{
+        margin-top: 30px;
+}
+      .copy{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: azure;
+    width: 100%;
+}
+       footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: azure;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+     footer .hero {
+  flex: 1 1 100px;
+  margin: 10px;
+}
+
+     footer .hero h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
+}
+     footer p{
+    cursor: pointer;
+}
+
+/* Responsive Media Queries for SignIn Page */
+
+/* Extra small devices (phones <576px) */
+@media (max-width: 576px) {
+  .var {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  }
+
+  .btn1 {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .hero {
+    margin: 15px 0;
+  }
+}
+
+/* Small devices (tablets, 576px – 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .var {
+    width: 80%;
+  }
+
+  .btn1 {
+    padding: 10px 15px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+/* Medium devices (laptops, 768px – 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .var {
+    width: 70%;
+  }
+}
+  </style>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+    <div class="container-fluid" >
+      <div class="row">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark"  style=" background: linear-gradient(10deg,#141146);">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="1logo.png" alt="logo" width="80" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex w-75" role="search">
+        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="signIn.html">SingIn</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="signUp.html">SingUp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+             <li class="nav-item">
+          <a class="nav-link" href="event.html">Events</a>
+        </li>
+         </li>
+             <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact.US</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+      </div>
+    </div>
+     <div class="var">
+     <form id="signinform" style="text-align: center;">
+      <h1>SignIn</h1> 
+        <!-- <label for="entername">Enter Your Name:</label>
+        <input id="entername" type="text" placeholder="Enter Your Name" required style="border: 2px solid black;"><br><br> -->
+
+        <label for="enteremail">Enter Your Email:</label>
+        <input id="enteremail" type="email" placeholder="Enter Your Email" required style="border: 2px solid black;"><br><br>
+        <label>Enter Password</label>
+          <input type="password" id="enterpass" placeholder="Enter New Password" required style="border: 2px solid black;">
+          <br><br>
+
+          <!-- <label for="padding">Enter Confirm Password</label>
+          <input type="password" id="enterpassword" placeholder="Enter Confirm Password" required style="border: 2px solid black;"><br><br> -->
+
+        <div style="margin-top: 20px;">
+          <button href="signUp.html" id="submit" class="btn1">Login</button>
+          
+          <!-- <button href="index.html" class="btn1">Cancel</button> -->
+            </div>
+     </form>
+     </div>
+     </div>
+      <!--FOOTER-->
+    <footer>
+      <div class="hero">
+            <h2>EvenTor</h2>
+            <p>About Us</p>
+            <p>Career</p>
+            <P>Tearm</P>
+            <P>Contact us</P>
+            
+         </div>
+         <div class="hero">
+            <h2>Service</h2>
+            <P>Event Management</P>
+            <p>Design & Conecpt</p>
+            <p>Event Production</p>
+            <p>Event Sourcing</p>
+         </div>
+         <div class="hero">
+            <h2>Social</h2>
+            <p>Facebook</p>
+            <p>Twiter</p>
+            <p>Instagram</p>
+            <p>Linkedin</p>
+         </div>
+         <div class="hero">
+            <h2>Contact US</h2>
+            <p>Mob: 8090998841</p>
+            <p>Email:panditanurag638@gmail.com</p>
+            <p>Address: Ashwan Mishran Rampur Jaunpur Uttar Pardesh</p>
+         </div>
+       <div class="copy">
+            <h3><i style="color: black;">&copy; Copyright Powered by Anurag Mishra Devloper </i></h3>
+    </footer>
+    <script>
+     document.getElementById("signinform").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  let enteremail = document.getElementById("enteremail").value;
+  let enterpass = document.getElementById("enterpass").value;
+
+  // GET SAVED DATA
+  let savedName = localStorage.getItem("name");
+  let savedEmail = localStorage.getItem("email");
+  let savedPassword = localStorage.getItem("password");
+
+  // --- VALIDATION START ---
+
+  if (enteremail === "") {
+    alert("Please enter your Email!");
+    return;
+  }
+
+  // Simple Email Format Check
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(enteremail)) {
+    alert("Please enter a valid Email Address!");
+    return;
+  }
+
+  if (enterpass === "") {
+    alert("Please enter your Password!");
+    return;
+  }
+
+  // --- VALIDATION END ---
+
+  // LOGIN CHECK
+  if (enteremail === savedEmail && enterpass === savedPassword) {
+    alert("Login Successfully! Welcome " + savedName);
+    window.location.href = "dasebord.html";
+  } else {
+    alert("Invalid Email or Password!");
+  }
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html> 

@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>signUp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+       body{
+        margin: 0;
+        padding: 0;
+        /* font-family: 'Times New Roman', Times, serif; */
+      }
+      h1{
+        text-align: center;
+        margin-top: 10px;
+      }
+      .var{
+  
+        margin-left: 35%;
+         color: black;
+        border-radius: 20px;
+        width: 500px;
+        padding: 30px;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        border:  2px solid black;
+        background-color: white;
+         transition: all 0.3s ease;
+       
+      }
+       .var:hover {
+         box-shadow: 0 12px 30px rgba(249, 5, 5, 0.3);
+       }
+      .sub{
+        /* background-color: rgb(60, 37, 131); */
+        text-decoration: none;
+        border-radius: 50px;
+        border-radius:150px;
+        padding: 15px;
+        background-color: azure;
+        color: black;
+      }
+      .copy{
+    bottom: 0;
+    background-color: azure;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    width: 100%;
+}
+     select {
+                  
+              padding: 10px;
+              border-radius: 5px;
+              border: 2px solid black;
+              margin-top: 20px;
+              text-transform: uppercase;
+        }                 
+        option {
+            text-transform: uppercase;
+                        
+        }
+           footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            /* background-color: #3e249c; */
+            /* color: goldenrod; */
+            font-family: Arial, sans-serif;
+            margin-top: 30px;
+          }
+          footer .hero {
+            flex: 1 1 100px;
+            margin: 10px;
+          }
+          
+          footer .hero h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            /* color: #b36c16; */
+            display: inline-block;
+            cursor: pointer;
+          }
+          footer p{
+              cursor: pointer;
+          }
+         /* Extra small devices (<576px) */
+@media (max-width: 576px) {
+  .var {
+    width: 90%;
+    margin-left: 5%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input, select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+
+  .sub {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .hero {
+    margin: 15px 0;
+  }
+}
+
+/* Small devices (576px–768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .var {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .sub {
+    padding: 10px 15px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+/* Medium devices (768px–992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .var {
+    width: 65%;
+    margin-left: 17.5%;
+  }
+}          
+        
+       </style>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+     <div class="container-fluid">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark"  style=" background: linear-gradient(10deg,#141146);">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="1logo.png" alt="logo" width="80" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex w-75" role="search">
+        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="signIn.html">SingIn</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="signUp.html">SingUp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+             <li class="nav-item">
+          <a class="nav-link" href="event.html">Events</a>
+        </li>
+         </li>
+             <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact.US</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+      </div>
+    </div>
+    
+      </div>
+    </div>
+     <div class="var">
+     <form id="signinform" style="text-align: center;">
+      <h1 style="margin-bottom: 50px; color: rgb(243, 17, 17);">SignUp</h1>
+      <!-- <div class="name"> -->
+        <label>Enter Your Name:</label>
+        <input id="entername" type="text"  placeholder="Enter Your Name" required style="border: 2px solid black;"><br><br>
+        
+        <label>Enter Your Email:</label>
+        <input id="enteremail" type="email" placeholder="Enter Your Email" required style="border: 2px solid black;"><br><br>
+
+         <label>Enter Password:</label>
+        <input id="enterpss" type="password" placeholder="Enter Your Email" required style="border: 2px solid black;"><br><br>
+
+         <label>Enter Conform Password:</label>
+        <input id="enterpssword" type="password" placeholder="Enter Your Email" required style="border: 2px solid black;"><br><br>
+
+        <label>Enter Your Contact Number:</label>
+        <input id="enterphone" type="number" placeholder="Enter Your Contact Number" required style="border: 2px solid black;"><br><br>
+
+        <label id="date" for="date"> Enter Your Booking Date:</label>
+        
+      <input id="day" type="text" size="3" placeholder="Day"    style="border: 2px solid black;"/>
+      <input id="month" type="text" size="3" placeholder="Month" style="border: 2px solid black;" />
+       <input id="year" type="text"  size="5" placeholder="Year" style="border: 2px solid black;" />
+       <div class="option"></div>
+          <select id="event_select">
+          <option> ---- What are you booking the event for? ---- </option>
+          <option>Birthday party</option>
+          <option>Engagement ceremony</option>
+          <option>Wedding</option>
+          <option>Retirement party</option>
+          <option>Other</option>
+            </select>
+            <br>
+            <select>
+          <option id="payment"> --Booking Charging Payment 
+          Method-- </option>
+          <option>GOOGLE PAY</option>
+          <option>PHONE PAY</option>
+          <option>CASE</option>
+          <option>UPI</option>
+          <option>OTHER </option>
+          </select><br>
+        <div style="margin-top: 20px;">
+          
+          <button id="but1"  class="sub">Submit</button>
+          <button id="" class="sub">Cancel</button>
+        </div>
+      </form>
+      </div>
+          <!--FOOTER-->
+          <footer>
+            <div class="hero">
+            <h2>EvenTor</h2>
+            <p>About Us</p>
+            <P>Tearm</P>
+            <P>Contact us</P>
+            
+         </div>
+         <div class="hero">
+            <h2>Service</h2>
+            <P>Event Management</P>
+            <p>Design & Conecpt</p>
+            <p>Event Production</p>
+            <p>Event Sourcing</p>
+         </div>
+         <div class="hero">
+            <h2>Social</h2>
+            <p>Facebook</p>
+            <p>Twiter</p>
+            <p>Instagram</p>
+            <p>Linkedin</p>
+         </div>
+         <div class="hero">
+            <h2>Contact US</h2>
+            <p>Mob: 8090998841</p>
+            <p>Email:panditanurag638@gmail.com</p>
+            <p>Address: Ashwan Mishran Rampur Jaunpur Uttar Pardesh</p>
+         </div>
+            <div class="copy">
+            <h3><i>&copy; Copyright Powered by Anurag Mishra Devloper </i></h3>
+          </div>
+          </footer>
+          <script>
+            document.getElementById("but1").addEventListener("click", function(event) {
+  event.preventDefault();
+
+  let entername = document.getElementById("entername").value;
+  let enteremail = document.getElementById("enteremail").value;
+  let enterpss = document.getElementById("enterpss").value;
+  let enterpssword = document.getElementById("enterpssword").value;
+  let enterphone = document.getElementById("enterphone").value;
+  let day = document.getElementById("day").value;
+  let month = document.getElementById("month").value;
+  let year = document.getElementById("year").value;
+  let event_select = document.getElementById("event_select").value;
+  let payment = document.getElementById("payment").value;
+
+  console.log(entername, enteremail, enterpss, enterpssword, enterphone, day, month, year, event_select, payment);
+    
+      if (!entername) {
+        alert("Please enter your name");
+        return;
+    }
+
+    // Email validation
+    if (!enteremail) {
+        alert("Please enter your email");
+        return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(enteremail)) {
+        alert("Please enter a valid email");
+        return;
+    }
+
+    // Password validation
+    if (!enterpss) {
+        alert("Please enter password");
+        return;
+    }
+
+    if (enterpss.length < 4) {
+        alert("Password must be at least 6 characters");
+        return;
+    }
+
+    if (enterpss !== enterpssword) {
+        alert("Password and Confirm Password do not match");
+        return;
+    }
+
+    // Phone validation
+    if (!enterphone) {
+        alert("Please enter your contact number");
+        return;
+    }
+
+    if (!/^\d{10}$/.test(enterphone)) {
+        alert("Enter a valid 10-digit phone number");
+        return;
+    }
+
+    // Date validation
+    if (!day || !month || !year) {
+        alert("Please enter complete booking date");
+        return;
+    }
+
+    if (isNaN(day) || isNaN(month) || isNaN(year)) {
+        alert("Booking date must be numbers");
+        return;
+    }
+
+    if (day < 1 || day > 31 || month < 1 || month > 12 || year.length !== 4) {
+        alert("Enter a valid date");
+        return;
+    }
+
+    // Event type validation
+    if (event_select === " ---- What are you booking the event for? ---- ") {
+        alert("Please select an event type");
+        return;
+    }
+
+    // Payment method validation
+    if (payment === " --Booking Charging Payment Method-- ") {
+        alert("Please select a payment method");
+        return;
+    }
+
+    if (enterpss === enterpssword) {
+    localStorage.setItem("name", entername);
+    localStorage.setItem("email", enteremail);
+    localStorage.setItem("password", enterpss);
+    localStorage.setItem("confirmPassword", enterpssword);
+    localStorage.setItem("phone", enterphone);
+    localStorage.setItem("day", day);
+    localStorage.setItem("month", month);
+    localStorage.setItem("year", year);
+    localStorage.setItem("event", event_select);
+    localStorage.setItem("payment", payment);
+
+    alert("Registration Successfully");
+    window.location.href = "signin.html";
+  } else {
+    alert("Password and Confirm Password do not match!");
+  }
+   });
+
+          </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

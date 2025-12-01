@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      .copy{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: azure;
+    width: 100%;
+}
+.card{
+
+  width: 300px;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  color: black;
+  display: flex;
+ flex-direction: column;
+   border-radius: 10px;
+   margin-left: 10px;
+   padding: 20px 10px;
+   align-items: center;
+   border: 1px solid black;
+}
+
+ h3{
+    
+    margin-top: 10px;
+    font-size: 20px;
+   }
+   .card p{
+    
+    margin-top: 10px;
+   }
+
+.card-container{
+        display: grid;
+        justify-content: space-evenly;
+        border-radius: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 20px;
+        
+        
+   }
+       .our{
+        /* background-color: antiquewhite; */
+        margin-top: 30px;
+        
+    }
+    .our h3{
+        text-align: center;
+        color: black;
+        font-size: 50px;
+        
+    }
+    .our p{
+        font-size: 20px;
+    }
+    .card:hover{
+    /* transform: scale(1.1); */
+     box-shadow: 0 12px 30px rgba(249, 5, 5, 0.3);
+   }
+    .imgcard{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 40px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.imgcard img{
+    width: 100%;
+    height: 100%;
+}
+.imgcard .overlay-text {
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: black;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease ;
+    position: absolute;
+}
+.imgcard:hover .overlay-text{
+    opacity: 1;
+
+}
+
+.artical
+    {
+        text-align: center;
+        /* background-color: antiquewhite; */
+        margin-top: 30px;
+    }
+     .artical h4{
+        color: indigo;
+     }
+
+
+      .card-text{
+    text-align: center;
+    color: darkgreen;
+   }
+
+   .card img{
+    /* width: 200px; */
+    background-color: aliceblue;
+    border-radius: 20px;
+     width: 100%;
+    right: 10px;
+    left: 10px;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.event-container
+{
+    grid-template-columns: repeat(2,1fr);
+    margin: 50px;
+    padding: 50px;
+    background-color: black;
+    margin-top: 5px;
+    border-radius: 30px;
+    color: white;
+}
+.event-container img{
+    border-radius: 10px;
+}
+
+.venue{
+    flex: 1;
+}
+.venue button{
+     border-radius: 50px;
+     background-color: darkorchid;
+     padding: 10px;
+     font-size: 20px;
+
+}
+      footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: azure;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+footer .hero {
+  flex: 1 1 100px;
+  margin: 10px;
+}
+
+footer .hero h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
+}
+footer p{
+    cursor: pointer;
+}
+ 
+/* ===== Extra Media Queries for Strong Responsiveness ===== */
+
+/* Large tablets and small laptops */
+@media (max-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .imgcard {
+    width: 90%;
+    height: auto;
+  }
+  .event-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .event-container img {
+    margin: 10px auto;
+    display: block;
+    width: 80%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .imgcard {
+    width: 100%;
+    height: auto;
+  }
+  .event-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .venue h1 {
+    font-size: 24px;
+  }
+  .venue button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .navbar-brand img {
+    width: 60px;
+    height: auto;
+  }
+  .carousel-inner img {
+    height: 180px;
+  }
+  .card h3 {
+    font-size: 16px;
+  }
+  .card p {
+    font-size: 12px;
+  }
+  footer .hero h2 {
+    font-size: 16px;
+  }
+  footer p {
+    font-size: 12px;
+  }
+  .venue h1 {
+    font-size: 18px;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+     <div class="container-fluid fixed-top">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style=" background: linear-gradient(10deg,#141146);">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="1logo.png" alt="logo" width="80" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex w-75" role="search">
+        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="signIn.html">SingIn</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="signUp.html">SingUp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+             <li class="nav-item">
+          <a class="nav-link" href="event.html">Events</a>
+        </li>
+         </li>
+             <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact.US</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+      </div>
+    </div>
+
+   <div class="container-fluid p-0 m-0">
+  <div class="row g-0">
+    <div id="carouselExampleCaptions" class="carousel slide w-100" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="event1.png" class="d-block w-100" alt="..." height="550px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Grand Celebration Night.</h5>
+            <p>Light, Music, And Endless Memories In One Magical Evening</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="event2.png" class="d-block w-100" alt="..." height="550px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Music Festival 2025</h5>
+            <p>Join The Crowd And Celebrate The Rhythm Of Life.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Decorations.png" class="d-block w-100" alt="..." height="550px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Forever Begins Here </h5>
+            <p>Two Souls, One Promise,Endless Celebrations.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+  <div class="our">
+      <h3>Services by Melodia® Event Management</h3>
+      <p>Melodia® Event Management is an ISO 9001:2015 certified event management company providing services exclusively throughout the entire state of Uttar Pardesh, India. We offer excellent, comprehensive event management services, including venue booking and selection assistance, personal event planning, corporate events and conferences, private parties, trade exhibitions, virtual event management services, destination weddings, and entertaining stage shows all over Uttar Pardesh. Feel free to contact us.</p>
+
+           <section class="card-container">
+        <div class="imgcard">
+        <img src="our1.png" alt="">
+        <div class="overlay-text">
+            <strong>Sun-kissed vows on Uttar Pardesh's sandy shores of India</strong>
+            Uttar Pardesh, in India, is a stunning destination for beach wedding ceremonies, with its serene beaches and picturesque backwaters providing the perfect backdrop memorable celebration.
+        </div>
+        </div>
+
+                <div class="imgcard">
+        <img src="our2.png" alt="">
+        <div class="overlay-text">
+            <strong>WHY IS Uttar Pardesh THE BEST DESTINATION FOR YOUR WEDDING?</strong>
+          Jaunpur, also called “God’s Own Country,” is a southern state of India and one of the most beautiful places to get married. With beaches,backwaters, luxury resorts,
+        </div>
+        </div>
+
+                <div class="imgcard">
+        <img src="our3.png" alt="">
+        <div class="overlay-text">
+            <strong>Birthday Parties in Uttar Pardesh</strong>
+            Birthday event management in Jaunpur for children and for adults both require adequate planning. If you plan it yourself you are tired doing the decorations, busy cooking food busy serving the food could eventually
+        </div>
+        </div>
+     </section>
+
+    </div>
+        <div class="artical">
+        <h4>OUR BLOGS & ARTICLES</h4>
+        <h2>OUR BLOGS & ARTICLES</h2>
+        <p>On this official Melodia Event Management website, we offer a diverse range of blogs and stories covering various topics related to event management in Uttar Pardesh. From destination wedding planning to corporate events, each blog provides valuable insights to help you plan your next event seamlessly.</p>
+      </div>
+        <!--BOX1-->
+     <main class="card-container" style="background-color:azure;">
+        <div class="card ">
+            <img src="wed.png" alt="Image" height="200px">
+            <h3>Top 10 Destination Wedding Planners in Uttar Pardesh</h3>
+            <p>Planning a wedding in God’s Own Country — Uttar Pardesh is every couple’s dream. From</p>
+            
+        </div>
+
+         <!-- BOX 2-->
+          <div class="card">
+            <img src="wed1.png" alt="Image" height="200px">
+            <h3>Destination Backwater Wedding Cost in Alleppey, Kumarakom and Kochi? A Practical Breakdown</h3>
+            <p>Jaunpur, with its palm tree-filled, serene backwaters, is quickly becoming a favorite for couples</p>
+           
+
+        </div>
+         <!-- BOX 3-->
+          <div class="card">
+            <img src="wed2.png" alt="Image" height="200px">
+            <h3>Legal Requirements for a Destination Wedding in Uttar Pardesh</h3>
+            <p>Uttar Pardesh, with its tranquil backwaters, verdant landscapes, and enticing beaches, is one of India’s</p>
+            
+
+        </div>
+         <!-- BOX 4-->
+          <div class="card">
+            <img src="wed3.png" alt="Image" height="200px">
+            <h3>Hindu Wedding Traditions in Uttar Pardesh: A Detailed Step-by-Step Guide</h3>
+            <p>Jaunpur Hindu wedding traditions and rituals are a colorful event that beautifully combines centuries-old</p>
+
+        </div>
+         <!-- BOX 5-->
+          <div class="card">
+            <img src="wed4.png" alt="Image" height="200px">
+            <h3>Why Heritage Homes Make the Perfect Wedding Venues</h3>
+            <p>The wedding represents a ceremony meant to celebrate tradition, love, and lasting memories. This</p>
+
+        </div>
+         <!-- BOX 6-->
+          <div class="card">
+            <img src="wed5.png" alt="Image" height="200px">
+            <h3>Top 10 Photographers in Alappuzha: Capturing the moments</h3>
+            <p>The city of Alappuzha, popularly known as the ‘Venice of the East,’ is revered</p>
+
+        </div>
+         <!-- BOX 7-->
+          <div class="card">
+            <img src="wed6.png" alt="Image" height="200px">
+           <h3>Best Muhurtam Timings & Booking Procedures for a Jaunpur Wedding</h3>
+            <p>Jaunpur, the Dwarka of the East, is among the most popular and preferred wedding</p>
+        </div>
+          <!-- BOX 8-->
+          <div class="card">
+            <img src="wed8.png" alt="Image" height="200px">
+           <h3> Wedding Photography In Guruvayur</h3>
+           <p>A wedding is not just an event; it’s a one-time ceremony honoring love, traditions,</p>
+
+        </div>
+            <!-- BOX 9-->
+          <div class="card">
+            <img src="wed10.png" alt="Image" height="200px">
+            <h3>Houseboat Weddings In Jaunpur: A Dreamy Celebration on the Water</h3>
+            <p>Nowadays, couples are looking for special and memorable ways to tie the knot because</p>
+        </div>
+
+         <!-- BOX 10-->
+          <div class="card">
+            <img src="wed11.png" alt="Image" height="200px">
+            <h3>How to Plan a Perfect Monsoon Wedding: A Complete Guide</h3>
+            <p>Although a monsoon wedding is a beautiful as well as pleasant event, it needs</p>
+            </div>
+              <!-- BOX 11-->
+          <div class="card">
+            <img src="wed12.png" alt="Image" height="200px">
+            <h3>Wedding Planners in Jaunpur</h3>
+            <p>Planning a wedding is one of the most memorable and challenging moments in life.</p>
+            </div>
+              <!-- BOX 12-->
+          <div class="card">
+            <img src="wed13.png" alt="Image" height="200px">
+           <h3>Stunning Wedding in Jaunpur for a Dreamy Celebration</h3>
+           <p>Table of Contents Jaunpur has it all, whether you’re envisioning a traditional wedding or</p>
+            </div>
+              <!-- BOX 13-->
+          <div class="card">
+            <img src="wed14.png" alt="Image" height="200px">
+            <h3>Catering Services in Jaunpur</h3>
+            <p>Catering services are the most integral part of an event in Kannur. Guests would</p>
+            
+            </div>
+              <!-- BOX 14-->
+          <div class="card">
+            <img src="wed15.png" alt="Image" height="200px">
+            <h3>Wedding Photography in Jaunpur</h3>
+            <p>Kannur is known for its landscape and culture, making it one of the loveliest</p>
+            </div>
+              <!-- BOX 15-->
+          <div class="card">
+            <img src="wed16.png" alt="Image" height="200px">
+             <h3>Wedding Photoshoot Poses for Couples: Timeless Ideas for Perfect Moments</h3>
+             <p>One of the most unforgettable events of your life is your wedding, and the</p>
+            </div>
+              <!-- BOX 16-->
+          <div class="card">
+            <img src="wed17.png" alt="Image" height="200px">
+             <h3>Top Bridal Hair Trends for 2025: Styles to Elevate Your Wedding Look</h3>
+             <p>Table of Contents On your wedding day, you want to look and feel your</p>
+            </div>
+              <!-- BOX 17-->
+          <div class="card">
+            <img src="wed18.png" alt="Image" height="200px">
+            <h3>How to Choose the Perfect Wedding Dress for Your Dreamy Wedding</h3>
+            <p>Table of Contents How to Choose the Perfect Wedding Dress in your special Day</p>
+            </div>
+              <!-- BOX 18-->
+          <div class="card">
+            <img src="wed19.png" alt="Image" height="200px">
+             <h3>Wedding Stage Decor Ideas to Make Your Day Truly Special</h3>
+             <p>When planning your wedding, the stage décor is one of the most crucial considerations.</p>
+            </div>
+              <!-- BOX 19-->
+          <div class="card">
+            <img src="wed20.png" alt="Image" height="200px">
+            <h3>Wedding Cake Designs for Destination Weddings in Jaunpur</h3>
+            <p>n a destination wedding, choosing a wedding cake is very significant. Wedding cakes are</p>
+            </div>
+              <!-- BOX 20-->
+          <div class="card">
+            <img src="wed21.png" alt="Image" height="200px">
+              <h3>Wedding Planners In Jaunpur</h3>
+             <p>Planning a wedding is one of life’s most beloved yet challenging events. Every couple</p>
+            </div>
+              <!-- BOX 21-->
+          <div class="card">
+            <img src="wed22.png" alt="Image" height="200px">
+            <h3>Catering Services in Calicut for Every Celebration</h3>
+            <p>Table of Contents Jaunpur, the vibrant city of Jaunpur also known as Kozhikode nowadays,</p>
+            </div>
+              <!-- BOX 22-->
+          <div class="card">
+            <img src="wed23.png" alt="Image" height="200px">
+             <h3>Catering Services In Jaunpur | Best Event Caterers </h3>
+             <p>Catering services have played a very important role in virtually every gathering and celebratory</p>
+            </div>
+              <!-- BOX 23-->
+          <div class="card">
+            <img src="wed24.png" alt="Image" height="200px">
+            <h3>Destination Wedding in Jaunpur, Uttar Pardesh </h3>
+             <p>Celebrating Love in divine city: The destination Wedding in Jaunpur , a sacred city</p>
+             
+            </div>
+              <!-- BOX 24-->
+          <div class="card">
+            <img src="wed25.png" alt="Image" height="200px">
+             <h3>How To Choose a Perfect Wedding Planner</h3>
+            <p>How To Choose a perfect Wedding Planner Planning a wedding can be both exciting</p>
+            </div>
+              <!-- BOX 25-->
+          <div class="card">
+            <img src="wed26.png" alt="Image" height="200px">
+           <h3>Jaunpur haldi stage decoration</h3>
+           <p>Splashes of Tradition: Kerala Haldi Stage Decoration Haldi decoration is an essential and cherished</p>
+            
+            </div>
+              <!-- BOX 26-->
+          <div class="card">
+            <img src="wed27.png" alt="Image" height="200px">
+            <h3>Enhacning Jaunpur Weddings: The Magic of Transparent Tents</h3>
+            <p>Germen Transparent tent wedding events in Jaunpur in Jaunpur, the event management Companies business</p>
+            </div>
+              <!-- BOX 27-->
+          <div class="card">
+            <img src="wed28.png" alt="Image" height="200px">
+             <h3>Jaunpur Wedding Rituals and Malayali Procedure</h3>
+             <p>Timeless Celebration: Jaunpur Hindu Wedding Rituals and Traditions Jaunpur, the coastal state of</p>
+            </div>
+              <!-- BOX 28-->
+          <div class="card">
+            <img src="wed29.png" alt="Image" height="200px">
+             <h3>Wedding And Event Management Companies in Jaunpur</h3>
+             <p>Jaunpur, aptly known as "God's Own Country," captivates with its lush greenery and stunning</p>
+        </div>
+
+              <!-- BOX 29-->
+          <div class="card">
+            <img src="wed30.png" alt="Image" height="200px">
+            <h3>Melodia Event Management Services</h3>
+            <p>Melodia Event Management Services is your key to unlocking memoriess. From planning to execution,</p>
+        </div>
+
+              <!-- BOX 30-->
+          <div class="card">
+            <img src="wed31.png" alt="Image" height="200px">
+            <h3>Utter Pardesh Catering Services and Cost</h3>
+            <p>In Jaunpur Catering services have become increasingly important for weddings and other events.</p>
+        </div>
+
+              <!-- BOX 31-->
+          <div class="card">
+            <img src="wed32.png" alt="Image" height="200px">
+            <h3>Bridal Makeup Trends you Needs to Know in 2025</h3>
+            <p>The key to 2025 bridal makeup is embracing uniqueness and classic style. The popular styles showcase</p>
+        </div>
+
+              <!-- BOX 32-->
+          <div class="card">
+            <img src="wed33.png" alt="Image" height="200px">
+            <h3>How To Choose The Perfect Wedding Venue in Jaunpur</h3>
+            <p>Choosing where to have your wedding is a significant decision, and my company and</p>
+        </div>
+
+              <!-- BOX 33-->
+          <div class="card">
+            <img src="wed34.png" alt="Image" height="200px">
+            <h3>Destination wedding in Jaunpur, Uttar Pardesh</h3>
+            <p>The Popularity of Destination Wedding in Uttar Pardesh If you are looking for the best</p>
+        </div>
+
+              <!-- BOX 34-->
+          <div class="card">
+            <img src="wed35.png" alt="Image" height="200px">
+            <h3>Destination Wedding in Jaunpur: Cost and Details</h3>
+            <p>Enchanting Venues and Affordable Costs: Destination Wedding in Jaunpur Destination weddings are becoming increasingly</p>
+        </div>
+
+              <!-- BOX 35-->
+          <div class="card">
+            <img src="wed36.png" alt="Image" height="200px">
+            <h3>Jaunpur Wedding Packages</h3>
+            <p>The cost and budget of weddings in Jaunpur varies depending on factors such as</p>
+        </div>
+
+              <!-- BOX 36-->
+          <div class="card">
+            <img src="wed37.png" alt="Image">
+            <h3>Jaunpur Wedding Dance and Cost</h3>
+            <p>Entertainment plays a significant role in events, and nowadays, wedding dances are gaining immense</p>
+        </div>
+
+          
+        </main>
+      <!-- </div> -->
+      <div class="event-container" height="100px">
+        <img src="event5.png" alt="" height="100px">
+        <img src="event6.png" alt="" height="100px">
+        <br>
+        <br>
+        <img src="event7.png" alt="" height="100px">
+        <img src="event8.png" alt="" height="100px">
+        <div class="venue">
+        <h1>Struggling to find the perfect venue?</h1>
+        <p>Find your perfect venue hassle-free with Melodia. Easy booking, endless choices.</p>
+
+        <button>Explore Venues</button>
+        </div>
+      </div>
+
+     <!--footer-->
+    <footer style="margin-top: 0px;">
+      <div class="hero">
+            <h2>EvenTor</h2>
+            <p>About Us</p>
+            <P>Tearm</P>
+            <P>Contact us</P>
+            
+         </div>
+         <div class="hero">
+            <h2>Service</h2>
+            <P>Event Management</P>
+            <p>Design & Conecpt</p>
+            <p>Event Production</p>
+            <p>Event Sourcing</p>
+         </div>
+         <div class="hero">
+            <h2>Social</h2>
+            <p>Facebook</p>
+            <p>Twiter</p>
+            <p>Instagram</p>
+            <p>Linkedin</p>
+         </div>
+         <div class="hero">
+            <h2>Contact US</h2>
+            <p>Mob: 8090998841</p>
+            <p>Email:panditanurag638@gmail.com</p>
+            <p>Address: Ashwan Mishran Rampur Jaunpur Uttar Pardesh</p>
+         </div>
+          <div class="copy">
+            <h3><i style="color: black;">&copy; Copyright Powered by Anurag Mishra Devloper </i></h3>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

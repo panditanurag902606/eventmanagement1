@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+       
+       
+      }
+      .about{
+        text-align: center;
+        font-size: 20px;
+        text-decoration: none;
+        /* padding: 100px; */
+        margin-top: 50px;
+        
+      }
+      .something{
+        margin-top: 50px;
+        font-size: 2rem;
+        margin-left: 200px;
+        
+      }
+      .there{
+         margin-top: 50px;
+        margin-left: 200px;
+        margin-right: 100px;
+      }
+      .img{
+        margin-top: 50px;
+        margin-left: 200px;
+        margin-right: 100px;
+        
+      }
+      .conference{
+        text-align: center;
+        font-size: 50px;
+      }
+      .para{
+        margin-left: 200px;
+      }
+      .card1{
+    margin-left: 200px;
+      }
+      .foot{
+    bottom: 0;
+    
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    width: 100%;
+    }
+      .who{
+        text-align: center;
+      }
+         .copy{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    /* background-color: azure; */
+    width: 100%;
+}
+ footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* background-color: azure; */
+  color: black;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+footer .hero {
+  flex: 1 1 100px;
+  margin: 10px;
+}
+
+footer .hero h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
+}
+footer p{
+    cursor: pointer;
+}
+
+  /* Responsive Media Queries */
+@media (max-width: 992px) {
+  .something,
+  .there,
+  .img,
+  .para,
+  .card1 {
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+
+  .img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .conference h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .something,
+  .there,
+  .img,
+  .para,
+  .card1 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .something h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .conference h1 {
+    font-size: 28px;
+  }
+
+  .who h1 {
+    font-size: 24px;
+  }
+
+  .who p {
+    font-size: 14px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .hero {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about h1 {
+    font-size: 24px;
+  }
+
+  .something h2 {
+    font-size: 20px;
+  }
+
+  .there,
+  .para,
+  .card1 {
+    font-size: 14px;
+  }
+
+  .conference h1 {
+    font-size: 22px;
+  }
+
+  .img img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer h2 {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  .foot h3 {
+    font-size: 12px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+     <div class="container-fluid">
+      <div class="row">
+      
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark"  style=" background: linear-gradient(10deg,#141146);">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="1logo.png" alt="logo" width="80" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex w-75" role="search">
+        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="signIn.html">SingIn</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="signUp.html">SingUp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+             <li class="nav-item">
+          <a class="nav-link" href="event.html">Events</a>
+        </li>
+         </li>
+             <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact.US</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</div>
+</nav>
+    </div>
+    </div>
+    <div class="container-fluid bg-dark">
+       <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+       <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+     </div>
+     <div class="offcanvas-body">
+    </div>
+    </div>
+    </div>
+    <div class="about">
+    <h1>About Us</h1>
+    </div>
+    <div class="something">
+      <h2>Something About Us</h2>
+    </div>
+    <div class="there">
+      There are several ways people can make money online. From selling products to advertising. In this article I am going to explain the concept of contextual advertising.
+      First I will explain what contextual advertising is. Contextual advertising means the advertising of products on a website according to the content the page is displaying. For example if the content of a website was information on a Ford truck then the advertisements would be for Ford trucks for sale, or Ford servicing etc. It picks up the words on the page and displays ads that are similar to those words. Then when someone either performs an action or clicks on your page you will get paid.
+     
+    </div>
+     <div class="img">
+       <img src="Anurag.png.jpg" alt="Anurag" height="700px" width="700px">
+       </div>
+    <div class="conference">
+      <h1>The 2025 Conference</h1>
+      </div>
+      <div class="para">
+      <p>When I first got into the online advertising business, I was looking for the magical combination that would put my website into the top search engine rankings, catapult me to the forefront of the minds or individuals looking to buy my product, and generally make me rich beyond my wildest dreams! After succeeding in the business for this long, I’m able to look back on my old self with this kind of thinking and shake my head.</p>
+    </div>
+    <div class="card1">
+  
+  <p>✔ <span>Write On Your Business Card</span></p>
+  <p>✔ <span>Advertising Outdoors</span></p>
+  <p>✔ <span>Effective Advertising Pointers</span></p>
+  <p>✔ <span>Kook 2 Directory Add Url Free</span></p>
+
+    </div>
+    <div class="who">
+      <h1>Who's Speaking</h1>
+      <p>These are our communicators, you can see each person information</p>
+    </div>
+    <!--FOOTER-->
+    <footer>
+      <div class="hero">
+            <h2>EvenTor</h2>
+            <p>About Us</p>
+            <P>Tearm</P>
+            <P>Contact us</P>
+            
+         </div>
+         <div class="hero">
+            <h2>Service</h2>
+            <P>Event Management</P>
+            <p>Design & Conecpt</p>
+            <p>Event Production</p>
+            <p>Event Sourcing</p>
+         </div>
+         <div class="hero">
+            <h2>Social</h2>
+            <p>Facebook</p>
+            <p>Twiter</p>
+            <p>Instagram</p>
+            <p>Linkedin</p>
+         </div>
+         <div class="hero">
+            <h2>Contact US</h2>
+            <p>Mob: 8090998841</p>
+            <p>Email:panditanurag638@gmail.com</p>
+            <p>Address: Ashwan Mishran Rampur Jaunpur Uttar Pardesh</p>
+         </div>
+       <div class="foot">
+            <h3><i>&copy; Copyright Powered by Anurag Mishra Devloper </i></h3>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .row{
+    font-size: 20px;
+} */
+.image-card{
+    width: 1000px;
+    height: 100;
+    display: block;
+
+}
+.image-card img{
+    width: 100%;
+    /* height: 100vh; */
+    height: 400px;
+    object-fit: cover;
+}
+
+    .our{
+        /* background-color: antiquewhite; */
+        margin-top: 30px;
+        
+    }
+    .our h3{
+        text-align: center;
+        color: black;
+        font-size: 50px;
+        
+    }
+    .our p{
+        font-size: 20px;
+    }
+    .imgcard{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 40px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.imgcard img{
+    width: 100%;
+    height: 100%;
+}
+.imgcard .overlay-text {
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: black;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease ;
+     position: absolute;
+}
+.imgcard:hover .overlay-text{
+    opacity: 1;
+
+}
+    .artical
+    {
+        text-align: center;
+        /* background-color: antiquewhite; */
+        margin-top: 30px;
+    }
+     .artical h4{
+        color: indigo;
+     }
+    .card-container{
+        display: grid;
+        justify-content: space-evenly;
+        border-radius: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 20px;   
+   }
+   .card:hover{
+    /* transform: scale(1.1); */
+     box-shadow: 0 12px 30px rgba(249, 5, 5, 0.3);
+   }
+    .card-text{
+    text-align: center;
+    color: darkgreen;
+   }
+   .card img{
+    /* width: 200px; */
+    background-color: aliceblue;
+    border-radius: 20px;
+     width: 100%;
+    right: 10px;
+    left: 10px;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    
+    
+}
+.event-container
+{
+    grid-template-columns: repeat(2,1fr);
+    margin: 50px;
+    padding: 50px;
+    background-color: black;
+    margin-top: 5px;
+    border-radius: 30px;
+    color: white;
+}
+.event-container img{
+    border-radius: 10px;
+}
+
+.venue{
+    flex: 1;
+}
+.venue button{
+     border-radius: 50px;
+     background-color: darkorchid;
+     padding: 10px;
+     font-size: 20px;
+
+}
+
+.card{
+
+  width: 300px;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  color: black;
+  display: flex;
+ flex-direction: column;
+   border-radius: 10px;
+   margin-left: 10px;
+   padding: 20px 10px;
+   align-items: center;
+   /* border: 1px solid black; */
+}
+   h3{
+    
+    margin-top: 10px;
+    font-size: 20px;
+   }
+   .card p{
+    
+    margin-top: 10px;
+   }
+
+   .copy{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: azure;
+    width: 100%;
+}
+ footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: azure;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+footer .hero {
+  flex: 1 1 100px;
+  margin: 10px;
+}
+
+footer .hero h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
+}
+footer p{
+    cursor: pointer;
+}
+
+
+/* Extra small devices (phones, <576px) */
+@media (max-width: 576px) {
+  .image-card img {
+    height: 200px; /* mobile me chhota */
+  }
+
+  .our h3 {
+    font-size: 28px;
+  }
+
+  .our p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr; /* ek line me ek card */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .imgcard {
+    width: 100%;
+    height: auto;
+  }
+
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .venue h1 {
+    font-size: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Small devices (tablets, >=576px and <768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 column */
+  }
+
+  .imgcard {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .event-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* Medium devices (laptops, >=768px and <992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 card ek row me */
+  }
+}
+
+/* Large devices (>=992px) */
+@media (min-width: 992px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* desktop ka layout */
+  }
+}
